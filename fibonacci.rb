@@ -14,3 +14,14 @@ def fib_iter(num)
     return total
 end
 
+def fib_rec(num, totals = [])
+  return totals if num == 0
+  if totals.empty?
+    return fib_rec(num - 1, [0])
+  elsif totals.length == 1
+    return fib_rec(num -1, [0,1])
+  else 
+    return fib_rec(num-1, totals.push( totals[-1] + totals[-1-1] ))
+  end
+end
+
