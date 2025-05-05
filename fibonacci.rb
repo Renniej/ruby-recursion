@@ -25,3 +25,5 @@ def fib_rec(num, totals = [])
   end
 end
 
+puts fib_rec(8).join(" , ")
+puts fib_iter(8).join(" , ")
